@@ -44,7 +44,7 @@ bool contains_x(TreeNode<int>* root, int x) {
 		check |= true;
 	}
 	
-	//Recursion call to check for rest of the nodes of the tree
+	//Recursion call to check for rest of the nodes of the root
 	for(int i=0; i<root->children.size(); i++) {
 		check |= contains_x(root->children[i], x);
 	}
