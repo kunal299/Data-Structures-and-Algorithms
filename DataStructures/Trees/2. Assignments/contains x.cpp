@@ -32,13 +32,19 @@ false
 */
 
 bool contains_x(TreeNode<int>* root, int x) {
+	//Edge Case
+	if(root==NULL) {
+        	return false;
+    	}
 	
 	bool check = false;
-
+	
+	//Using the approach of or(|) operator which will keep the true value(if found) till the end.
 	if(root->data==x) {
 		check |= true;
 	}
-
+	
+	//Recursion call to check for rest of the nodes of the tree
 	for(int i=0; i<root->children.size(); i++) {
 		check |= contains_x(root->children[i], x);
 	}
