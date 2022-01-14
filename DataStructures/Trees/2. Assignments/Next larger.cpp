@@ -32,18 +32,22 @@ Sample Output 2:
 */
 
 TreeNode<int>* getNextLargerElement(TreeNode<int>* root, int x) {
+    //Edge Case
     if(root==NULL)
     {
         return NULL;
     }
    
+    //Initiate ans with NULL as initially no value is greater than x
     TreeNode<int>* ans = NULL;
     
+    //Value which is greater than x, we would save the node in the ans;
     if(root->data > x)
     {
         ans = root;
     } 
     
+    //Recursively call for the child nodes and compare it's data with the ans node
     for(int i=0; i<root->children.size(); i++)
     {
         TreeNode<int>* temp = getNextLargerElement(root->children[i], x);
