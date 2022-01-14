@@ -8,7 +8,7 @@ An Open Source repository containing Data Structures and Algorithms implemented 
 
 ### Data Structures
 
-Visit the [Data Structures](https://github.com/kunal299/Data-Structures-and-Algorithms/tree/main/DataStructures) repository if you would like to see examples for the following C++ programs.
+Visit the [Data Structures](https://github.com/kunal299/Data-Structures-and-Algorithms/tree/main/Data%20Structures) repository if you would like to see examples for the following C++ programs.
 
-- [Trees](https://github.com/kunal299/Data-Structures-and-Algorithms/tree/main/DataStructures/Trees)
-- [Binary Trees](https://github.com/kunal299/Data-Structures-and-Algorithms/tree/main/DataStructures/Binary%20Trees)
+- [Trees](https://github.com/kunal299/Data-Structures-and-Algorithms/tree/main/Data%20Structures/Trees)
+- [Binary Trees](https://github.com/kunal299/Data-Structures-and-Algorithms/tree/main/Data%20Structures/Binary%20Trees)
