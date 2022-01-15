@@ -174,6 +174,33 @@ int height(BinaryTreeNode<int>* root) {
     return max(height(root->left), height(root->right))+1;
 }
 
+/*IMPORTANT PROBLEM:
+	For a given Binary Tree of type integer, update it with its corresponding mirror image.
+	
+	Eg: 
+	Original B-Tree   Mirrored B-Tree    
+	   	1                   1
+	  3   2               3   2 
+	4  5 6  7           7  6 5  4
+*/
+void mirrorBinaryTree(BinaryTreeNode<int>* root) {
+    if(root==NULL) {
+        return;
+    }
+    
+    //NOTE: Don't exchange the data of the left node with the right node.
+    //So, Exchange the left node with right node.
+    if(root->left!=NULL || root->right!=NULL) {
+        BinaryTreeNode<int>* temp = root->left;
+    	root->left = root->right;
+    	root->right = temp;
+    }
+    
+    //Recursively calling the same for both the child nodes
+    mirrorBinaryTree(root->left);
+    mirrorBinaryTree(root->right);
+}
+
 //You can directly paste this while running the program on the terminal: 
 //1 2 3 4 5 6 7 -1 -1 8 9 -1 -1 -1 -1 -1 -1 -1 -1 
 int main() {
