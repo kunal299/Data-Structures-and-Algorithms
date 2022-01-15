@@ -201,6 +201,32 @@ void mirrorBinaryTree(BinaryTreeNode<int>* root) {
     mirrorBinaryTree(root->right);
 }
 
+//Pre-Order Binary Tree Traversal
+void preOrder(BinaryTreeNode<int> *root) {
+	if(root==NULL) {
+        return;
+    }
+    
+    //Printing the data of the root first 
+    cout<<root->data<<" ";
+    
+    preOrder(root->left);
+    preOrder(root->right);
+}
+
+//Post-Order Binary Tree Traversal
+void postOrder(BinaryTreeNode<int> *root) {
+	if(root==NULL) {
+        return;
+    }
+    
+    postOrder(root->left);
+    postOrder(root->right);
+    
+    //Printing the data of the root in the last
+    cout<<root->data<<" ";
+}
+
 //You can directly paste this while running the program on the terminal: 
 //1 2 3 4 5 6 7 -1 -1 8 9 -1 -1 -1 -1 -1 -1 -1 -1 
 int main() {
