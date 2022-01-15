@@ -163,6 +163,17 @@ bool isNodePresent(BinaryTreeNode<int> *root, int x) {
     return isNodePresent(root->left, x) | isNodePresent(root->right, x);
 }
 
+//Function used to return the height of the binary tree
+int height(BinaryTreeNode<int>* root) {
+    if(root==NULL) {
+        return 0;
+    } 
+    
+    //Recursively checking for both left and right node and 
+    //then returning the maximum of them plus one(for root node)
+    return max(height(root->left), height(root->right))+1;
+}
+
 //You can directly paste this while running the program on the terminal: 
 //1 2 3 4 5 6 7 -1 -1 8 9 -1 -1 -1 -1 -1 -1 -1 -1 
 int main() {
@@ -185,8 +196,6 @@ int main() {
 	} else {
 		cout<<"The given value doesn't exists in the binary tree."<<endl;
 	}
-	
-	
 
 	delete root;
 }
