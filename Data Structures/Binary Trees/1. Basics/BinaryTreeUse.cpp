@@ -139,6 +139,16 @@ void printTreeLevelWise(BinaryTreeNode<int>* root) {
 	}
 }
 
+//Function used to find the total number of nodes in a binary tree
+int numOfNodes(BinaryTreeNode<int>* root) {
+	//Base Case
+	if(root==NULL) {
+		return 0;
+	}
+
+	return 1 + numOfNodes(root->left) + numOfNodes(root->right);
+}
+
 //You can directly paste this while running the program on the terminal: 
 //1 2 3 4 5 6 7 -1 -1 8 9 -1 -1 -1 -1 -1 -1 -1 -1 
 int main() {
@@ -153,5 +163,9 @@ int main() {
 
 	BinaryTreeNode<int>* root = takeInputLevelWise();
 	printTreeLevelWise(root);
+	cout<<endl;
+	cout<<"Total no. of nodes: "<< numOfNodes(root);
+	cout<<endl;
+
 	delete root;
 }
