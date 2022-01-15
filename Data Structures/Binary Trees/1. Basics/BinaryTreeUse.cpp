@@ -149,6 +149,20 @@ int numOfNodes(BinaryTreeNode<int>* root) {
 	return 1 + numOfNodes(root->left) + numOfNodes(root->right);
 }
 
+//Function used to check if a node exists in a tree with data X or not
+bool isNodePresent(BinaryTreeNode<int> *root, int x) {
+    if(root==NULL) {
+        return false;
+    }
+    
+    if(root->data==x) {
+        return true;
+    }
+	
+	//Using or operation to get the final boolean value
+    return isNodePresent(root->left, x) | isNodePresent(root->right, x);
+}
+
 //You can directly paste this while running the program on the terminal: 
 //1 2 3 4 5 6 7 -1 -1 8 9 -1 -1 -1 -1 -1 -1 -1 -1 
 int main() {
@@ -166,6 +180,13 @@ int main() {
 	cout<<endl;
 	cout<<"Total no. of nodes: "<< numOfNodes(root);
 	cout<<endl;
+	if(isNodePresent(root, 5)) {
+		cout<<"The given value exists in the binary tree."<<endl;
+	} else {
+		cout<<"The given value doesn't exists in the binary tree."<<endl;
+	}
+	
+	
 
 	delete root;
 }
