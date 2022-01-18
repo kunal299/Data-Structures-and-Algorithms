@@ -42,7 +42,7 @@ int lastIndex(int input[], int size, int x) {
 			return -1;
 		}
 	}
-
+	
 	return 1+ans;
 
 }
