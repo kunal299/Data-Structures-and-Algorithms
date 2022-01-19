@@ -24,6 +24,8 @@ Sample Output :
 1 3 4
 */
 
+//Time Complexity - O(n)
+//Space Complexity - O(1)
 int allIndexes(int input[], int size, int x, int output[]) {
 	//Base Case 
 	//If the input array is empty, then simply return 0 which basically means that
