@@ -32,9 +32,9 @@ Sample Output 2 :
 //Space Complexity - O(n)
 //where n is the smaller of the two numbers we need to multiply
 int multiplyNumbers(int m, int n) {
-	if(n>m) {
-		return multiplyNumbers(n, m);
-	}
+    if(n>m) {
+	return multiplyNumbers(n, m);
+    }
 
     if(n==0 || m==0) {
         return 0;
