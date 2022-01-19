@@ -25,6 +25,9 @@ Sample Output 2 :
 1.93750
 */
 
+//Time Complexity - O(k)
+//Space Complexity - O(k)
+
 //Returns 2 to the power k
 double helper(int k) {
 	if(k==0) {
