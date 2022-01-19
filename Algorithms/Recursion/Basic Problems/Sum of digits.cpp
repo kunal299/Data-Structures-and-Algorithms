@@ -23,9 +23,11 @@ Sample Output 2 :
 9
 */
 
+//Time Complexity - O(log(n))
+//Space Complexity - O(log(n))
 int sumOfDigits(int n) {
-	if(n==0) {
-		return 0;
+	if(n<=9) {
+		return n;
 	}
 
 	//Adding the last digit with the recursive calls to get the total sum 
