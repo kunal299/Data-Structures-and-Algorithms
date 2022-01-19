@@ -24,6 +24,9 @@ Sample Output 2:
 false
 */
 	
+//Time Complexity - O(n)
+//Space Complexity - O(n)
+
 //Function used to find the length of the string 
 int len(char s[]) {
 	int cnt = 0;
