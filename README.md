@@ -10,3 +10,12 @@ Visit the [Data Structures](https://github.com/kunal299/Data-Structures-and-Algo
 
 - [Trees](https://github.com/kunal299/Data-Structures-and-Algorithms/tree/main/Data%20Structures/Trees)
 - [Binary Trees](https://github.com/kunal299/Data-Structures-and-Algorithms/tree/main/Data%20Structures/Binary%20Trees)
+
+___
+
+### Algorithms
+
+Visit the [Algorithms](https://github.com/kunal299/Data-Structures-and-Algorithms/tree/main/Algorithms) repository if you would like to see examples for the following C++ programs.
+
+- [Linked List](https://github.com/kunal299/Data-Structures-and-Algorithms/tree/main/Algorithms/Linked%20List)
+- [Recursion](https://github.com/kunal299/Data-Structures-and-Algorithms/tree/main/Algorithms/Recursion)
