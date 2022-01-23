@@ -10,6 +10,7 @@ Visit the [Data Structures](https://github.com/kunal299/Data-Structures-and-Algo
 
 - [Trees](https://github.com/kunal299/Data-Structures-and-Algorithms/tree/main/Data%20Structures/Trees)
 - [Binary Trees](https://github.com/kunal299/Data-Structures-and-Algorithms/tree/main/Data%20Structures/Binary%20Trees)
+- [Binary Search Trees](https://github.com/kunal299/Data-Structures-and-Algorithms/tree/main/Data%20Structures/Binary%20Search%20Trees)
 
 ___
 
