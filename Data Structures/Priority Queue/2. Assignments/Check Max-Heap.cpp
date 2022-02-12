@@ -1,28 +1,49 @@
-#include <iostream>
-using namespace std;
+/*
+Check Max-Heap
 
-bool isMaxHeap(int input[], int n) {
+Given an array of integers, check whether it represents max-heap or not. 
+Return true if the given array represents max-heap, else return false.
 
-	int parentIndex = 0;
-	int leftChildIndex = 2*parentIndex + 1;
-	int rightChildIndex = 2*parentIndex + 2;
+Input Format:
+The first line of input contains an integer, that denotes the value of the size of the array. 
+Let us denote it with the symbol N.
+The following line contains N space separated integers, that denote the value of the elements of the array.
 
-	while(leftChildIndex<n) {
-		if(input[parentIndex]<input[leftChildIndex] || input[parentIndex]<input[rightChildIndex]) {
-		return false;
-	} 
-	}
+Output Format :
+The first and only line of output contains true if it represents max-heap and false if it is not a max-heap.
 
-	if(parentIndex<input[leftChildIndex] || parentIndex<input[rightChildIndex]) {
-		return false;
-	} 
-}
+Constraints:
+1 <= N <= 10^5
+1 <= Ai <= 10^5
+Time Limit: 1 sec
 
-int main() {
-	int input[] = {42, 20, 28, 6, 14, 11, 9, 4};
-	if(isMaxHeap(input, n)) {
-		cout<<"true"<<endl;
-	} else {
-		cout<<"false"<<endl;
-	}
+Sample Input 1:
+8
+42 20 18 6 14 11 9 4
+Sample Output 1:
+true
+*/
+
+//Time Complexity - O(n)
+//Space Complexity - O(1)
+bool isMaxHeap(int arr[], int n) {
+    for(int i=0; i<n; i++) {
+        int parentIndex = i;
+        int leftChildIndex = 2*i+1;
+        int rightChildIndex = 2*i+2;
+        
+        if(leftChildIndex>=n) {
+            break;
+        }
+        
+        if(arr[parentIndex]<arr[leftChildIndex]) {
+            return false;
+        }
+        
+        if(arr[parentIndex]<arr[rightChildIndex]) {
+            return false;
+        }
+    }
+    
+    return true;
 }
