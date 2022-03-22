@@ -4,6 +4,7 @@
 
 using namespace std;
 
+//Time Complexity - O(size)
 vector<int> removeDuplicates(int *a, int size) {
 	vector<int> output;
 	unordered_map<int, bool> mp;
