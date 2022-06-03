@@ -3,6 +3,11 @@
     Space Complexity - O(1)
 */
 
+/*
+    Very IMP. 
+    Check out the intuition beghind the algo: https://takeuforward.org/data-structure/next_permutation-find-next-lexicographically-greater-permutation/ 
+*/
+
 class Solution {
 public:
     void swap(vector<int>& nums, int i, int j) {
