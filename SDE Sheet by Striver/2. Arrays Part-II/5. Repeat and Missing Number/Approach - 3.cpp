@@ -5,6 +5,8 @@
 
 //Using the XOR property
 
+//" Don't need to worry, just follow the given steps. Implementation is super easy. "
+
 #include <bits/stdc++.h> 
 
 pair<int,int> missingAndRepeating(vector<int> &arr, int n)
@@ -27,7 +29,7 @@ pair<int,int> missingAndRepeating(vector<int> &arr, int n)
     //Step4: Separate in 2 baskets
     int basket1 = 0;
     int basket2 = 0;
-    int r_set_bit = nums & ~(nums - 1);
+    int r_set_bit = nums & ~(nums - 1); //Returns the binary number containing the rightmost set bit as 1
     
     for(int i=0; i<n; i++) {
         if(r_set_bit & arr[i]) {
