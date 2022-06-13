@@ -13,9 +13,9 @@ public:
                 if(nums[i]==nums[j]) {
                     count++;
                 }
-                if(count>floor(nums.size()/2)) {
-                    return nums[i];
-                }
+            }
+            if(count>floor(nums.size()/2)) {
+                return nums[i];
             }
         }
 
