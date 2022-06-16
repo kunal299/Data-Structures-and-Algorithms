@@ -4,59 +4,62 @@
 */
 
 class Solution {
-public:
-    int merge(vector<int>& nums, int left, int mid, int right) {
-        int j=mid+1;
+public:    
+        
+    int merge(vector<int> &nums, vector<int> &tmp, int left, int mid, int right) {
+        int i=left, j=mid, k=left;
         int cnt_rev = 0;
-        for (int i = left; i <= mid; i++) {
-            long long store = 2;
-            while ((j <= right) && (nums[i] > (long long)(store * nums[j]))) {
+    
+        for(i=left; i<mid; i++) {
+            while((j<=right) && (nums[i] > (long long)((long long)2 * nums[j]))) {
                 j++;
             }
-            
-            cnt_rev += (j - (mid+1));
+            cnt_rev += (j-mid);
         }
-        
-        int i=left;
-        j = mid+1;
-        vector<int> tmp;
-        
-        while((i<=mid) && (j<=right)) {
+    
+        i = left;
+        j = mid;
+    
+        while((i<mid) && (j<=right)) {
             if(nums[i] > nums[j]) {
-                tmp.push_back(nums[j++]);
+                tmp[k++] = nums[j++];
             } else {
-                tmp.push_back(nums[i++]);    
+                tmp[k++] = nums[i++];
             }
         }
-        
-        while(i<=mid) {
-            tmp.push_back(nums[i++]);
-        }
-        
-        while(j<=right) {
-           tmp.push_back(nums[j++]);
-        }
-        
-        for(i=left; i<=right; i++) {
-            nums[i] = tmp[i-left];
-        }
-        
-        return cnt_rev;
-    }
     
-    int mergeSort(vector<int>& nums, int left, int right) {
-        if (left >= right) return 0;
-        int mid = (left+right)/2;  
-        
-        int cnt_rev = mergeSort(nums, left, mid);
-        cnt_rev += mergeSort(nums, mid+1, right);
-            
-        cnt_rev += merge(nums, left, mid, right);
-        
+        while(i<mid) {
+            tmp[k++] = nums[i++];
+        }
+    
+        while(j<=right) {
+            tmp[k++] = nums[j++];
+        }
+    
+        for(i=left; i<=right; i++) {
+            nums[i] = tmp[i];
+        }
+    
         return cnt_rev;
     }
+
+    int mergeSort(vector<int> &nums, vector<int> &tmp, int left, int right) {
+        int cnt_rev = 0;
+        if(right > left) {
+            int mid = (left+right)/2;
+            cnt_rev += mergeSort(nums, tmp, left, mid);
+            cnt_rev += mergeSort(nums, tmp, mid+1, right);
+        
+            cnt_rev += merge(nums, tmp, left, mid+1, right);
+        }
+    
+        return cnt_rev;
+    }
+            
     
     int reversePairs(vector<int>& nums) {
-        return mergeSort(nums, 0, nums.size()-1);
+        int n = nums.size();
+        vector<int> tmp(n, 0);
+        return mergeSort(nums, tmp, 0, n-1);
     }
 };
