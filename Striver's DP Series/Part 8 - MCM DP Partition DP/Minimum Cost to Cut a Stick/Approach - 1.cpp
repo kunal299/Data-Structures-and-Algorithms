@@ -1,6 +1,6 @@
 /*
-    Time Complexity - O(N*N)
-    Space Complexity - O(N)
+    Time Complexity - O(N*N*N)
+    Space Complexity - O(N*N)
 */
 
 class Solution {
