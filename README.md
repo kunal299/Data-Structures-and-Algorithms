@@ -14,7 +14,7 @@ Visit the [Data Structures](https://github.com/kunal299/Data-Structures-and-Algo
 
 ___
 
-### Algorithms
+### Algorithm
 
 Visit the [Algorithms](https://github.com/kunal299/Data-Structures-and-Algorithms/tree/main/Algorithms) repository if you would like to see examples for the following C++ programs.
 
